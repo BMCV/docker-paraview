@@ -4,7 +4,8 @@ FROM jlesage/baseimage-gui:ubuntu-24.04-v4.9.0 AS build
 RUN apt-get -q update && \
     apt-get -q -y upgrade && \
     apt-get -q -y install build-essential software-properties-common && \
-    apt-get -q -y install curl wget git python3 python3-dev python3-pip paraview
+    apt-get -q -y install curl wget git python3 python3-dev python3-pip && \
+    apt-get -q -y install paraview=5.11.2+dfsg-6build5
 
 
 EXPOSE 5800
